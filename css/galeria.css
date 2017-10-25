@@ -1,0 +1,16 @@
+body {
+    background-image: url(../img/bg-galeria.jpg);
+}
+.galeria-img {
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 70px;
+    width: 80%;
+    overflow: visible;
+    animation: 1s ease-out onloadOpacity;
+}
+
+
+.galeria-img img {
+    width: 100%;
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/normal.css">
+        <link rel="stylesheet" type="text/css" href="./css/domov.css">
+        <script type="text/javascript" src="./js/video.js"></script>
+	</head>
+	<body>
+        <header>
+            <div class="header-border-left"></div>
+            <nav tabindex="0">
+                <div class="expander">Menu</div>
+                <a href="#" class="domov selected">Domov</a>
+                <a href="./omne" class="omne">O mne</a>
+                <a href="./galeria" class="galeria">Galéria</a>
+                <a href="./kontakt" class="kontakt">Kontakt</a>
+            </nav>
+            <div class="header-border-right"></div>
+        </header>
+        <a class="play" onclick="videoShow();"></a>
+        <div class="video-wrapper" id="js-video-wrapper">
+            <video id="js-video" controls>
+                <source src="bgvid.mp4" type="video/mp4">
+            </video>
+            <div class="video-behind" onclick="videoHide();"></div>
+        </div>
+	</body>
+</html>
