@@ -1,12 +1,24 @@
 <!doctype html>
-<html>
+<html lang="sk">
 	<head>
-		<title>Page Title</title>
+		<title>Braňo Kúzelník</title>
+        
+        <!-- meta -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
+        
+        <!-- css -->
         <link rel="stylesheet" type="text/css" href="./css/normal.css">
         <link rel="stylesheet" type="text/css" href="./css/domov.css">
         <script type="text/javascript" src="./js/video.js"></script>
+        
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./img/favicon/manifest.json">
+        <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#d5c15b">
+        <meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
         <header>
@@ -23,7 +35,7 @@
         <a class="play" onclick="videoShow();"></a>
         <div class="video-wrapper" id="js-video-wrapper">
             <video id="js-video" controls>
-                <source src="bgvid.mp4" type="video/mp4">
+                <source src="vid.mp4" type="video/mp4">
             </video>
             <div class="video-behind" onclick="videoHide();"></div>
         </div>
