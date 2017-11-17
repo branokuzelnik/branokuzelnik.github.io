@@ -8,36 +8,108 @@
 		<meta name="viewport" content="initial-scale=1.0">
         
         <!-- css -->
-        <link rel="stylesheet" type="text/css" href="./css/normal.css">
-        <link rel="stylesheet" type="text/css" href="./css/domov.css">
-        <script type="text/javascript" src="./js/video.js"></script>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" type="text/css" href="./ASSETS/js/javascript.fullPage.css">
+        <script src="./ASSETS/js/slideshow.js"></script>
         
         <!-- favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
-        <link rel="manifest" href="./img/favicon/manifest.json">
-        <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#d5c15b">
+        <link rel="apple-touch-icon" sizes="180x180" href="./ASSETS/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./ASSETS/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./ASSETS/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./ASSETS/favicon/manifest.json">
+        <link rel="mask-icon" href="./ASSETS/favicon/safari-pinned-tab.svg" color="#d5c15b">
         <meta name="theme-color" content="#ffffff">
 	</head>
-	<body>
-        <header>
-            <div class="header-border-left"></div>
-            <nav tabindex="0">
-                <div class="expander">Menu</div>
-                <a href="#" class="domov selected">Domov</a>
-                <a href="./omne" class="omne">O mne</a>
-                <a href="./galeria" class="galeria">Galéria</a>
-                <a href="./kontakt" class="kontakt">Kontakt</a>
-            </nav>
-            <div class="header-border-right"></div>
-        </header>
-        <a class="play" onclick="videoShow();"></a>
-        <div class="video-wrapper" id="js-video-wrapper">
-            <video id="js-video" controls>
-                <source src="vid.mp4" type="video/mp4">
-            </video>
-            <div class="video-behind" onclick="videoHide();"></div>
-        </div>
+	<body id="fullpage" onload="carousel();">
+        <section id="domov" data-anchor="domov">
+            <header>
+                <img class="logo" src="ASSETS/logo/d75754.svg">
+                <nav>
+                    <a href="#domov" class="domov selected">Domov</a>
+                    <a href="#omne" class="omne">O mne</a>
+                    <a href="#galeria" class="galeria">Galéria</a>
+                    <a href="#kontakt" class="kontakt">Kontakt</a>
+                </nav>
+            </header>
+            <div class="right-col">
+                <h1>Braňo<br> Kúzelník</h1>
+                <a href="vid.mp4" class="video-link">
+                </a>
+            </div>
+        </section>
+        <section id="omne" data-anchor="omne">
+            <header>
+                <img class="logo" src="ASSETS/logo/d7b854.svg">
+                <nav>
+                    <a href="#domov" class="domov">Domov</a>
+                    <a href="#omne" class="omne selected">O mne</a>
+                    <a href="#galeria" class="galeria">Galéria</a>
+                    <a href="#kontakt" class="kontakt">Kontakt</a>
+                </nav>
+            </header>
+            <div class="right-col">
+                <p>Som 18 ročný kúzelník z Trenčína, ktorý ponúka vystúpenia pre plesy, firemné akcie, súkromné akcie a pod.</p>
+                <ul>
+                    Kúzleniu sa venujem 5 rokov a prezentujem:
+                        <li>Javiskové kúzla</li>
+                        <li>Kartové triky</li>
+                        <li>Mikro-mágiu</li>
+                        <li>Ilúzie</li>
+                        <li>a iné...</li>
+                </ul>
+            </div>
+        </section>
+        <section id="galeria" data-anchor="galeria">
+            <header>
+                <img class="logo" src="ASSETS/logo/d7b854.svg">
+                <nav>
+                    <a href="#domov" class="domov">Domov</a>
+                    <a href="#omne" class="omne">O mne</a>
+                    <a href="#galeria" class="galeria selected">Galéria</a>
+                    <a href="#kontakt" class="kontakt">Kontakt</a>
+                </nav>
+            </header>
+            <div class="slideshow">
+                <img class="slide" src="ASSETS/slideshow/1.jpg">
+                <img class="slide" src="ASSETS/slideshow/2.jpg">
+                <img class="slide" src="ASSETS/slideshow/3.jpg">
+                <img class="slide" src="ASSETS/slideshow/4.jpg">
+                <img class="slide" src="ASSETS/slideshow/5.jpg">
+                <img class="slide" src="ASSETS/slideshow/6.jpg">
+                <img class="slide" src="ASSETS/slideshow/7.jpg">
+                <img class="slide" src="ASSETS/slideshow/8.jpg">
+                <img class="slide" src="ASSETS/slideshow/9.jpg">
+                <img class="slide" src="ASSETS/slideshow/10.jpg">
+                <img class="slide" src="ASSETS/slideshow/11.jpg">
+                <img class="slide" src="ASSETS/slideshow/12.jpg">
+            </div>
+        </section>
+        <section id="kontakt" data-anchor="kontakt">
+            <header>
+                <img class="logo" src="ASSETS/logo/d7b854.svg">
+                <nav>
+                    <a href="#domov" class="domov">Domov</a>
+                    <a href="#omne" class="omne">O mne</a>
+                    <a href="#galeria" class="galeria">Galéria</a>
+                    <a href="#kontakt" class="kontakt selected">Kontakt</a>
+                </nav>
+            </header>
+            <div class="right-col">
+                <p>
+                    <b>Branislav Struk</b><br>
+                    0908882607<br>
+                    branokuzelnik@gmail.com
+                </p>
+            </div>
+        </section>
+        <script src="./ASSETS/js/javascript.fullPage.min.js"></script>
+        <script>
+            if(window.innerWidth > 568){
+                fullpage.initialize('#fullpage', {
+                    anchors: ['domov', 'omne', 'galeria', 'kontakt'],
+                    css3:true
+                });
+            }
+        </script>
 	</body>
 </html>
