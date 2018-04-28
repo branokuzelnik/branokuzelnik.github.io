@@ -1,16 +1,16 @@
 @font-face {
     font-family: "Segoe UI";
-    src: url(src/segoeuil.ttf);
+    src: url(segoeuil.ttf);
     font-weight: lighter;
 }
 @font-face {
     font-family: "Segoe UI";
-    src: url(src/segoeui.ttf);
+    src: url(segoeui.ttf);
     font-weight: normal;
 }
 @font-face {
     font-family: "Segoe UI";
-    src: url(src/segoeuib.ttf);
+    src: url(segoeuib.ttf);
     font-weight: bold;
 }
 html, body {
