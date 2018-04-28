@@ -1,3 +1,18 @@
+@font-face {
+    font-family: "Segoe UI";
+    src: url(src/segoeuil.ttf);
+    font-weight: lighter;
+}
+@font-face {
+    font-family: "Segoe UI";
+    src: url(src/segoeui.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Segoe UI";
+    src: url(src/segoeuib.ttf);
+    font-weight: bold;
+}
 html, body {
     position: relative;
     display: flex;
