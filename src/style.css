@@ -237,15 +237,17 @@ header video {
     header nav {
         display: none;
     }
-    nav {
-        z-index: 999;
+    #container>nav {
+        display: flex;
+        position: fixed;
+        z-index: 300;
         justify-content: flex-start;
         background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 100%);
     }
-    nav a:not(.mobileToggleOffShow) {
+    nav a.mobileUnderHide {
         display: none;
     }
-    nav.responsive a {
+    nav.responsive a.mobileUnderHide {
         display: flex;
     }
     nav.responsive {
@@ -259,7 +261,7 @@ header video {
         border: none;
         margin: 0 30px 0 0;
     }
-    nav.responsive a:not(.mobileToggleOffShow) {
+    nav.responsive a.mobileUnderHide {
         width: 100%;
         padding-left: 30px;
         border-bottom: 1px solid grey;
