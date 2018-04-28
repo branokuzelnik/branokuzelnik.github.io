@@ -1,0 +1,273 @@
+html, body {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: "Segoe UI";
+    background: black;
+    color: white;
+    max-width: 100%;
+    width: 100%;
+}
+#container {
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    min-height: 100%;
+}
+header {
+    display: flex;
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background: black;
+    background-image: none;
+    overflow: hidden;
+    color: white;
+    justify-content: center;
+    z-index: 150;
+}
+
+header nav {
+    position: absolute;
+    z-index: 155;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 100%);
+}
+nav {
+    position: fixed;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 60%);
+    z-index: 100;
+}
+nav a {
+    padding: 25px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+nav a:hover {
+    color: white;
+    transition: 0.3s ease all;
+}
+nav a:nth-of-type(2) {
+    order: 1;
+}
+nav a:nth-of-type(3) {
+    order: 2;
+}
+nav .logo {
+    order: 3;
+}
+nav div {
+    order: 2;
+}
+nav a:nth-of-type(4) {
+    order: 4;
+}
+nav a:nth-of-type(5) {
+    order: 5;
+}
+nav a:nth-of-type(6) {
+    order: 6;
+}
+nav div, nav.responsive div {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+}
+nav .icon {
+    display: none;
+}
+section {
+    display: flex;
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
+    padding: 150px 0 0;
+    margin: auto;
+}
+#omne {
+    flex-flow: row;
+}
+h1 {
+    margin: 0;
+    font-weight: lighter;
+    font-size: 72px;
+    text-shadow: 0 7px 50px rgba(255,255,255,1);
+}
+#omne .profilovka {
+    width: 320px;
+    height: 450px;
+    margin: 0 60px 0 0;
+    background-image: url(omne_profil.jpg);
+    background-size: 100%;
+    background-position: top center;
+    flex-shrink: 0;
+    border-radius: 15px;
+}
+#omne .popis {
+    width: 60%;
+}
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+header video {
+    position: absolute;
+    margin-top: -45px;
+    width: 150%;
+    height: 130%;
+}
+.logo {
+    background-image: url(logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+#galeria div.fotky img, #galeria div.fotky a {
+    min-width: 250px;
+    max-width: 250px;
+    width: 250px;
+    height: 150px;
+    margin: 0 30px 30px 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+#galeria div.fotky img {
+    border-radius: 15px;
+}
+#galeria div.fotky a {
+    width: 250px;
+    height 250px;
+    display: flex;
+    position: relative;
+}
+#galeria div.fotky {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: center;
+}
+#galeria {
+    flex-flow: column;
+}
+#galeria .video, #galeria .video iframe {
+    height: 500px;
+}
+#kontakt iframe {
+    overflow: hidden;
+}
+#kontakt {
+    flex-flow: column;
+    padding-bottom: 150px;
+    background-image: url(logo-outline.svg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: center right;
+}
+@media (max-width: 750px) {
+    header {
+        background-position: center;
+        background-size: cover;
+        background-image: url(header.jpg);
+    }
+    header video {
+        display: none;
+    }
+    #omne {
+        flex-flow: column;
+        margin: auto;
+    }
+    #omne .profilovka {
+        display: none;
+        /*margin: auto;*/
+    }
+    #omne .popis {
+        width: 100%;
+    }
+    #kontakt {
+        background: none;
+    }
+}
+@media (max-width: 1000px) {
+    #kontakt {
+        background-size: 25%;
+        background-position: center right;
+    }
+}
+@media (min-width: 1200px) {
+    #galeria div.fotky img, #galeria div.fotky a {
+        min-width: 320px;
+        max-width: 320px;
+        width: 320px;
+        height: 180px;
+    }
+}
+@media (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    nav {
+        z-index: 999;
+        justify-content: flex-start;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 100%);
+    }
+    nav a:not(.mobileToggleOffShow) {
+        display: none;
+    }
+    nav.responsive a {
+        display: flex;
+    }
+    nav.responsive {
+        background: black !important;
+        flex-flow: column;
+        max-width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+    }
+    nav .logo, nav.responsive .logo {
+        border: none;
+        margin: 0 30px 0 0;
+    }
+    nav.responsive a:not(.mobileToggleOffShow) {
+        width: 100%;
+        padding-left: 30px;
+        border-bottom: 1px solid grey;
+    }
+    nav.responsive div {
+        width: auto;
+    }
+    nav div {
+        width: 100%;
+    }
+    nav .icon {
+        font-size: 36px;
+        display: block;
+    }
+    nav div {
+        order: -1;
+    }
+    nav div, nav.responsive div {
+    }
+    .formular {
+        display: none;
+    }
+    #galeria .video, #galeria .video iframe {
+        height: 150px;
+    }
+}
