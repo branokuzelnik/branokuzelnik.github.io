@@ -6,10 +6,16 @@
         <!-- meta -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
+        <meta name="description" content="Som 19 ročný kúzelník z Trenčína, ktorý sa venuje profesionálne kúzlam, mágii a ilúziám.">
         
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="src/style.css">
-        <link rel="stylesheet" type="text/css" href="src/lightbox.css">
+        <link rel="stylesheet" type="text/css" href="src/lightbox/lity.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- js -->
+        <script src="src/lightbox/jquery.js"></script>
+        <script src="src/lightbox/lity.min.js"></script>
         
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
@@ -81,17 +87,19 @@
             </section>
             <section id="galeria">
                 <div class="fotky">
-                <a href="src/gal_1.jpg" data-lightbox="img"><img src="src/gal_1.jpg"></a>
-                <a href="src/gal_2.jpg" data-lightbox="img"><img src="src/gal_2.jpg"></a>
-                <a href="src/gal_3.jpg" data-lightbox="img"><img src="src/gal_3.jpg"></a>
-                <a href="src/gal_4.jpg" data-lightbox="img"><img src="src/gal_4.jpg"></a>
-                <a href="src/gal_5.jpg" data-lightbox="img"><img src="src/gal_5.jpg"></a>
-                <a href="src/gal_6.jpg" data-lightbox="img"><img src="src/gal_6.jpg"></a>
-                <a href="src/gal_7.jpg" data-lightbox="img"><img src="src/gal_7.jpg"></a>
-                <a href="src/gal_8.jpg" data-lightbox="img"><img src="src/gal_8.jpg"></a>
-                <a href="src/gal_9.jpg" data-lightbox="img"><img src="src/gal_9.jpg"></a>
+                    <a href="src/gal_1.jpg" data-lity><img src="src/gal_1.jpg"></a>
+                    <a href="src/gal_2.jpg" data-lity><img src="src/gal_2.jpg"></a>
+                    <a href="src/gal_3.jpg" data-lity><img src="src/gal_3.jpg"></a>
+                    <a href="src/gal_4.jpg" data-lity><img src="src/gal_4.jpg"></a>
+                    <a href="src/gal_5.jpg" data-lity><img src="src/gal_5.jpg"></a>
+                    <a href="src/gal_6.jpg" data-lity><img src="src/gal_6.jpg"></a>
+                    <a href="src/gal_7.jpg" data-lity><img src="src/gal_7.jpg"></a>
+                    <a href="src/gal_8.jpg" data-lity><img src="src/gal_8.jpg"></a>
+                    <a href="src/gal_9.jpg" data-lity><img src="src/gal_9.jpg"></a>
+                    <a href="//www.youtube.com/watch?v=uf3w1tH_xno" data-lity><img src="src/gal_10.jpg"></a>
+                    <a href="//www.youtube.com/watch?v=pVxYuIjMw2g" data-lity><img src="src/gal_11.jpg"></a>
+                    <a href="//www.youtube.com/watch?v=zEFnRa40uUU" data-lity><img src="src/gal_12.jpg"></a>
                 </div>
-                <div class="video" style="position:relative;"><iframe src="https://player.vimeo.com/video/267045371" style="position:absolute;top:0;left:0;width:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
             </section>
             <section id="kontakt">
                 <h6 style="margin-bottom: -15px;">Kontakt</h6>
@@ -100,8 +108,8 @@
                     0908882607<br>
                     branokuzelnik@gmail.com
                 </p>
-                <div class="formular">
-                <p>Kontaktný formulár:</p>
+                <a href="#formular" class="a-formular" data-lity>Kontaktný formulár &rarr;</a>
+                <div id="formular" style="background:#000; border: 1px solid #fff4; border-radius: 15px; padding: 15px;" class="lity-hide">
                 <a id="foxyform_embed_link_926220" href="http://www.foxyform.com/">foxyform</a>
                 <script type="text/javascript">
                 (function(d, t){
@@ -112,8 +120,15 @@
                 }(document, "script"));
                 </script>
                 </div>
+                
+                <div class="nav-sns">
+                    <a href="https://www.facebook.com/branokuzelnik" class="a-sns"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/brano_kuzelnik" class="a-sns"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/brano_kuzelnik/" class="a-sns"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC18aY6gVhJ1pHiWbyUc3S2g" class="a-sns"><i class="fa fa-youtube-play"></i></a>
+                    <a href="https://plus.google.com/u/0/102722476901990683026" class="a-sns"><i class="fa fa-google-plus"></i></a>
+                </div>
             </section>
         </div>
-        <script src="src/lightbox.js"></script>
     </body>
 </html>

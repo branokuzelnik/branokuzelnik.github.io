@@ -1,3 +1,6 @@
+/* CSS BY AZURRY */
+/* www.azurry.stream 2018 */
+
 @font-face {
     font-family: "Segoe UI";
     src: url(segoeuil.ttf);
@@ -120,6 +123,9 @@ h1 {
     font-size: 72px;
     text-shadow: 0 7px 50px rgba(255,255,255,1);
 }
+#kontakt h1 {
+    text-shadow: 0px 7px 30px rgba(0,0,0,1);
+}
 #omne .profilovka {
     width: 320px;
     height: 450px;
@@ -189,12 +195,46 @@ header video {
 }
 #kontakt {
     flex-flow: column;
-    padding-bottom: 150px;
-    background-image: url(logo-outline.svg);
+    padding-bottom: 300px;
+    background-image: url(header.jpg);
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: 500px;
-    background-position: center right;
+    background-position: center bottom;
 }
+#kontakt .a-formular {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    background-color: #0007;
+    margin-bottom: 15px;
+    width: 200px;
+}
+#kontakt .a-formular:hover {
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    background-color: #fff7;
+}
+#kontakt .nav-sns {
+    display: flex;
+    flex-flow: row;
+}
+#kontakt .a-sns {
+    width: 50px;
+    font-size: 25px;
+    text-align: center;
+    border-left: 1px solid white;
+    color: white;
+}
+#kontakt .a-sns:first-of-type {
+    border: none;
+}
+#kontakt .a-sns:hover {
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 750px) {
     header {
         background-position: center;
@@ -214,15 +254,6 @@ header video {
     }
     #omne .popis {
         width: 100%;
-    }
-    #kontakt {
-        background: none;
-    }
-}
-@media (max-width: 1000px) {
-    #kontakt {
-        background-size: 25%;
-        background-position: center right;
     }
 }
 @media (min-width: 1200px) {
@@ -286,5 +317,25 @@ header video {
     }
     #galeria .video, #galeria .video iframe {
         height: 150px;
+    }
+    body {
+        background-image: none;
+    }
+    #kontakt {
+        background-image: url(logo-outline.jpg);
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: bottom;
+    }
+}
+@media (min-width: 1000px) {
+    body {
+        background-position: right calc(100% + 300px);
+    }
+}
+
+@media (min-width: 1500px) {
+    body {
+        background-position: right calc(100% + 400px);
     }
 }
