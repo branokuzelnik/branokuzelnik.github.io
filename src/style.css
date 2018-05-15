@@ -231,9 +231,17 @@ header video {
     border: none;
 }
 #kontakt .a-sns:hover {
-    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
-
+.len-mobil {
+    display: none !important;
+    box-shadow: 0 0 75px rgba(255,255,255, 0.5);
+    border-radius: 15px;
+}
+.len-mobil img {
+    box-shadow: 0 0 7px rgba(255,255,255, 1);
+    border: 1px solid #fff;
+}
 /* MEDIA QUERIES */
 @media (max-width: 750px) {
     header {
@@ -326,6 +334,12 @@ header video {
         background-repeat: no-repeat;
         background-size: 60%;
         background-position: bottom;
+    }
+    .len-mobil {
+        display: block !important;
+    }
+    .video-background, .video-foreground {
+        display: none;
     }
 }
 @media (min-width: 1000px) {
