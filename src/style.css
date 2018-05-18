@@ -1,7 +1,8 @@
 /* CSS BY AZURRY */
 /* www.azurry.stream 2018 */
 
-@font-face {
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+/*@font-face {
     font-family: "Segoe UI";
     src: url(segoeuil.ttf);
     font-weight: lighter;
@@ -15,7 +16,7 @@
     font-family: "Segoe UI";
     src: url(segoeuib.ttf);
     font-weight: bold;
-}
+}*/
 html, body {
     position: relative;
     display: flex;
@@ -26,7 +27,7 @@ html, body {
     overflow-x: hidden;
 }
 body {
-    font-family: "Segoe UI";
+    font-family: "Quicksand";
     background: black;
     color: white;
     max-width: 100%;
