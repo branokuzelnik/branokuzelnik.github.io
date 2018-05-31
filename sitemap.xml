@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-	  <loc>http://branokuzelnik.ml/</loc>
+	  <loc>http://branokuzelnik.eu/</loc>
 	  <lastmod>2018-05-15</lastmod>
 	  <priority>1</priority>
 	</url>
 	<url>
-	  <loc>http://branokuzelnik.ml/#omne</loc>
+	  <loc>http://branokuzelnik.eu/#omne</loc>
 	  <lastmod>2018-05-15</lastmod>
 	</url>
 	<url>
-	  <loc>http://branokuzelnik.ml/#galeria</loc>
+	  <loc>http://branokuzelnik.eu/#galeria</loc>
 	  <lastmod>2018-05-15</lastmod>
 	</url>
 	<url>
-	  <loc>http://branokuzelnik.ml/#kontakt</loc>
+	  <loc>http://branokuzelnik.eu/#kontakt</loc>
 	  <lastmod>2018-05-15</lastmod>
 	</url>
 </urlset>
