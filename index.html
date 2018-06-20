@@ -46,17 +46,17 @@
     </script>
     <body>
         <div id="container">
+            <nav id="nav">
+                <div>
+                <a class="logo mobileToggleOffShow"></a>
+                <a href="javascript:void(0);" class="icon mobileToggleOffShow" onclick="mobileNavToggle()">&#9776;</a>
+                </div>
+                <a href="#" class="mobileUnderHide" onclick="mobileNavToggle()">Domov</a>
+                <a href="#omne" class="mobileUnderHide" onclick="mobileNavToggle()">O mne</a>
+                <a href="#galeria" class="mobileUnderHide" onclick="mobileNavToggle()">Galéria</a>
+                <a href="#kontakt" class="mobileUnderHide" onclick="mobileNavToggle()">Kontakt</a>
+            </nav>
             <header>
-                <nav id="nav">
-                    <div>
-                    <a class="logo mobileToggleOffShow"></a>
-                    <a href="javascript:void(0);" class="icon mobileToggleOffShow" onclick="mobileNavToggle()">&#9776;</a>
-                    </div>
-                    <a href="#" class="mobileUnderHide" onclick="mobileNavToggle()">Domov</a>
-                    <a href="#omne" class="mobileUnderHide" onclick="mobileNavToggle()">O mne</a>
-                    <a href="#galeria" class="mobileUnderHide" onclick="mobileNavToggle()">Galéria</a>
-                    <a href="#kontakt" class="mobileUnderHide" onclick="mobileNavToggle()">Kontakt</a>
-                </nav>
                 <div class="header-vid" include-autoplay-vid="autoplay-vid.html"></div>
 				<script>
 					function includeAutoplayVid() {

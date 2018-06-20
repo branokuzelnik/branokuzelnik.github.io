@@ -53,7 +53,7 @@ header {
     overflow: hidden;
 }
 
-header nav {
+nav {
     position: fixed;
     padding: 20px 0;
     text-transform: uppercase;
@@ -64,43 +64,43 @@ header nav {
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 60%);
     z-index: 200;
 }
-header nav a {
+nav a {
     padding: 25px;
     color: rgba(255,255,255,0.6);
     text-decoration: none;
     transition: 0.3s ease all;
 }
-header nav a:hover {
+nav a:hover {
     color: white;
     transition: 0.3s ease all;
 }
-header nav a:nth-of-type(2) {
+nav a:nth-of-type(2) {
     order: 1;
 }
-header nav a:nth-of-type(3) {
+nav a:nth-of-type(3) {
     order: 2;
 }
-header nav .logo {
+nav .logo {
     order: 3;
 }
-header nav div {
+nav div {
     order: 2;
 }
-header nav a:nth-of-type(4) {
+nav a:nth-of-type(4) {
     order: 4;
 }
-header nav a:nth-of-type(5) {
+nav a:nth-of-type(5) {
     order: 5;
 }
-header nav a:nth-of-type(6) {
+nav a:nth-of-type(6) {
     order: 6;
 }
-header nav div, header nav.responsive div {
+nav div, nav.responsive div {
     display: flex; display: -webkit-flex;
     justify-content: space-between;
     flex-flow: row;
 }
-header nav .icon {
+nav .icon {
     display: none;
 }
 .header-vid {
@@ -220,7 +220,7 @@ h6 {
     box-shadow: 0 0 15px rgba(255,255,255,0.5);
     background-color: #fff7;
 }
-#kontakt .header nav-sns {
+#kontakt .nav-sns {
     display: flex; display: -webkit-flex;
     flex-flow: row;
 }
@@ -230,6 +230,7 @@ h6 {
     text-align: center;
     border-left: 1px solid white;
     color: white;
+    padding: 0 10px;
 }
 #kontakt .a-sns:first-of-type {
     border: none;
@@ -276,47 +277,52 @@ h6 {
         height: 180px;
     }
 }
+@media (max-width: 490px) {
+    #galeria div.fotky img, #galeria div.fotky a {
+        margin: 0 0 30px 0;
+    }
+}
 @media (max-width: 600px) {
-    header nav {
+    nav {
         display: flex; display: -webkit-flex;
         position: fixed;
         z-index: 200;
         justify-content: flex-start;
         background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 100%);
     }
-    header nav a.mobileUnderHide {
+    nav a.mobileUnderHide {
         display: none;
     }
-    header nav.responsive a.mobileUnderHide {
+    nav.responsive a.mobileUnderHide {
         display: flex; display: -webkit-flex;
     }
-    header nav.responsive {
+    nav.responsive {
         background: black !important;
         flex-flow: column;
         max-width: 100%;
         height: 100%;
         justify-content: flex-start;
     }
-    header nav .logo, header nav.responsive .logo {
+    nav .logo, nav.responsive .logo {
         border: none;
         margin: 0 30px 0 0;
     }
-    header nav.responsive a.mobileUnderHide {
+    nav.responsive a.mobileUnderHide {
         width: 100%;
         padding-left: 30px;
         border-bottom: 1px solid grey;
     }
-    header nav.responsive div {
+    nav.responsive div {
         width: auto;
     }
-    header nav div {
+    nav div {
         width: 100%;
     }
-    header nav .icon {
+    nav .icon {
         font-size: 36px;
         display: block;
     }
-    header nav div {
+    nav div {
         order: -1;
     }
     .formular {
