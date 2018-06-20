@@ -62,7 +62,7 @@ header nav {
     display: flex; display: -webkit-flex;
     justify-content: center;
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 60%);
-    z-index: 100;
+    z-index: 200;
 }
 header nav a {
     padding: 25px;
@@ -280,7 +280,7 @@ h6 {
     header nav {
         display: flex; display: -webkit-flex;
         position: fixed;
-        z-index: 300;
+        z-index: 200;
         justify-content: flex-start;
         background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgb(0, 0, 0) 100%);
     }
