@@ -52,7 +52,9 @@ header {
     z-index: 150;
     overflow: hidden;
 }
-
+a, a:visited, a:hover, a:active, a:focus {
+    color: white;
+}
 nav {
     position: fixed;
     padding: 20px 0;
