@@ -17,6 +17,7 @@
         <!-- js -->
         <script src="src/lightbox/jquery.js"></script>
         <script src="src/lightbox/lity.min.js"></script>
+        <script src="src/modernizr-custom.js"></script>
         
         <!-- favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png?v=bOLYEQNwbO">
@@ -46,27 +47,53 @@
     <body>
         <div id="container">
             <header>
-                <nav>
-                    <a class="logo"></a>
-                    <a href="#">Domov</a>
-                    <a href="#omne">O mne</a>
-                    <a href="#galeria">Galéria</a>
-                    <a href="#kontakt">Kontakt</a>
-                </nav>
-                <div class="header-vid">
-                    <iframe src="https://www.youtube-nocookie.com/embed/Z5Zjum2b0Zo?playlist=Z5Zjum2b0Zo&loop=1&autoplay=1&modestbranding=1&controls=0&showinfo=0&rel=0&enablejsapi=1&version=3&playerapiid=mbYTP_bgndVideo&origin=http%3A%2F%2Fbranokuzelnik.ml&allowfullscreen=true&wmode=transparent&iv_load_policy=3&html5=1&volume=0" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
-                </div>
-            </header>
-            <nav class="nav" id="nav">
-                <div>
+                <nav id="nav">
+                    <div>
                     <a class="logo mobileToggleOffShow"></a>
                     <a href="javascript:void(0);" class="icon mobileToggleOffShow" onclick="mobileNavToggle()">&#9776;</a>
-                </div>
-                <a href="#" class="mobileUnderHide" onclick="mobileNavToggle()">Domov</a>
-                <a href="#omne" class="mobileUnderHide" onclick="mobileNavToggle()">O mne</a>
-                <a href="#galeria" class="mobileUnderHide" onclick="mobileNavToggle()">Galéria</a>
-                <a href="#kontakt" class="mobileUnderHide" onclick="mobileNavToggle()">Kontakt</a>
-            </nav>
+                    </div>
+                    <a href="#" class="mobileUnderHide" onclick="mobileNavToggle()">Domov</a>
+                    <a href="#omne" class="mobileUnderHide" onclick="mobileNavToggle()">O mne</a>
+                    <a href="#galeria" class="mobileUnderHide" onclick="mobileNavToggle()">Galéria</a>
+                    <a href="#kontakt" class="mobileUnderHide" onclick="mobileNavToggle()">Kontakt</a>
+                </nav>
+                <div class="header-vid" include-autoplay-vid="autoplay-vid.html"></div>
+				<script>
+					function includeAutoplayVid() {
+					  var z, i, elmnt, file, xhttp;
+					  /*loop through a collection of all HTML elements:*/
+					  z = document.getElementsByTagName("*");
+					  for (i = 0; i < z.length; i++) {
+						elmnt = z[i];
+						/*search for elements with a certain atrribute:*/
+						file = elmnt.getAttribute("include-autoplay-vid");
+						if (file) {
+						  /*make an HTTP request using the attribute value as the file name:*/
+						  xhttp = new XMLHttpRequest();
+						  xhttp.onreadystatechange = function() {
+							if (this.readyState == 4) {
+							  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+							  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+							  /*remove the attribute, and call this function once more:*/
+							  elmnt.removeAttribute("include-autoplay-vid");
+							  includeAutoplayVid();
+							}
+						  }
+						  xhttp.open("GET", file, true);
+						  xhttp.send();
+						  /*exit the function:*/
+						  return;
+						}
+					  }
+					}
+					Modernizr.on('videoautoplay', function(result) {
+						if (result) {
+							includeAutoplayVid();
+						}
+					  }
+					);
+				</script>
+            </header>
             <section id="omne">
                 <div class="profilovka"></div>
                 <div class="popis">
