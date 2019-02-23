@@ -226,7 +226,7 @@ section {
             width: 100%;
         }
     }
-    iframe { /* ios iframe bug fix */
+    iframe.iosbugfix { /* ios iframe bug fix */
         width: 0;
         height: 0;
 
