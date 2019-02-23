@@ -54,7 +54,7 @@ body * {
   box-sizing: border-box;
 }
 
-body a.link {
+body a.link, body .infobox a {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -329,18 +329,6 @@ section.slideshow {
   z-index: 50;
 }
 
-section.slideshow iframe {
-  border-top: 4px solid #f1f148;
-  width: 1280px;
-  height: 720px;
-}
-
-@media (max-width: 1300px) {
-  section.slideshow iframe {
-    width: 100%;
-  }
-}
-
 @media (max-width: 900px) {
   section.slideshow {
     position: relative;
@@ -354,6 +342,26 @@ section.slideshow iframe {
     position: relative;
     bottom: auto;
   }
+}
+
+section .iframe {
+  border-top: 4px solid #f1f148;
+  width: 1280px;
+  height: 720px;
+}
+
+@media (max-width: 1300px) {
+  section .iframe {
+    width: 100%;
+  }
+}
+
+section iframe {
+  /* ios iframe bug fix */
+  width: 0;
+  height: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 section.padding {

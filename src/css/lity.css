@@ -165,11 +165,18 @@
   display: block;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   background: #000;
+}
+.lity-iframe-container iframe { /* ios bug fix */
+    width: 0;
+    height: 0;
+
+    min-width: 100%;
+    min-height: 100%;
 }
 .lity-hide {
   display: none;

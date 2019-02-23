@@ -37,7 +37,7 @@ body {
     
     * {box-sizing: border-box;}
     
-    a.link {
+    a.link, .infobox a {
         color: white;
         text-decoration: none;
         border-bottom: 1px solid transparent;
@@ -206,14 +206,6 @@ section {
         position: absolute;
         bottom: 50px;
         z-index: 50;
-        iframe {
-            border-top: 4px solid $yellow;
-            width: 1280px;
-            height: 720px;
-            @media (max-width: 1300px) {
-                width: 100%;
-            }
-        }
         @media (max-width: 900px) {
             position: relative;
             bottom: auto;
@@ -225,6 +217,21 @@ section {
                 bottom: auto;
             }
         }
+    }
+    .iframe {
+        border-top: 4px solid $yellow;
+        width: 1280px;
+        height: 720px;
+        @media (max-width: 1300px) {
+            width: 100%;
+        }
+    }
+    iframe { /* ios iframe bug fix */
+        width: 0;
+        height: 0;
+
+        min-width: 100%;
+        min-height: 100%; 
     }
     &.padding {
         padding-top: 270px;
@@ -299,6 +306,7 @@ section {
         color: $yellow;
         background: transparent;
     }
+    
     .form {
         max-width: 100%;
     }
