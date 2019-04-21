@@ -18,7 +18,7 @@ body {
         background-position: top center;
         background-color: black;
         @media (max-width: 900px) {
-            background: url(../img/bg/3m.jpg) no-repeat fixed center;
+            background: url(../img/bg/3m-v2.jpg) no-repeat fixed center;
             background-color: black;
         }
     }
@@ -94,7 +94,12 @@ nav {
     a:hover {border-bottom: 1px solid $yellow;}
     a {text-decoration: none;}
     a.menu {display: none;}
-    .logo {height: 100px;}
+    .logo {
+        height: 100px;
+        @media (max-width: 900px) {
+            height: 75px;
+        }
+    }
     .current {color: $yellow;}
     .dropdown>div {
         position: absolute;

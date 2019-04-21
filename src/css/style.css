@@ -33,7 +33,7 @@ body.uvod {
 
 @media (max-width: 900px) {
   body.uvod {
-    background: url(../img/bg/3m.jpg) no-repeat fixed center;
+    background: url(../img/bg/3m-v2.jpg) no-repeat fixed center;
     background-color: black;
   }
 }
@@ -145,6 +145,12 @@ nav a.menu {
 
 nav .logo {
   height: 100px;
+}
+
+@media (max-width: 900px) {
+  nav .logo {
+    height: 75px;
+  }
 }
 
 nav .current {
