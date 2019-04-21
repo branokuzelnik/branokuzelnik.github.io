@@ -14,7 +14,8 @@ body {
     background: url(../img/bg/2.jpg) no-repeat fixed center;
     background-color: black;
     &.uvod {
-        background: url(../img/bg/3.jpg) no-repeat fixed center;
+        background: url(../img/bg/3-v2.jpg) no-repeat fixed center;
+        background-position: top center;
         background-color: black;
         @media (max-width: 900px) {
             background: url(../img/bg/3m.jpg) no-repeat fixed center;
