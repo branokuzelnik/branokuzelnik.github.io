@@ -325,6 +325,9 @@ section {
         &.galeria div {
             max-width: 440px;
         }
+        &.galeria div.left {
+            margin-top: 50px;
+        }
     }
     @media (max-width: 1180px) {
         &.kontakt .left {
@@ -364,6 +367,9 @@ section {
         }
         &.galeria .thumb {
             width: 100%;
+        }
+        &.galeria div.left {
+            margin-top: 50px;
         }
     }
 }

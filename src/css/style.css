@@ -500,6 +500,9 @@ section .form {
   section.galeria div {
     max-width: 440px;
   }
+  section.galeria div.left {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -559,6 +562,9 @@ section .form {
   }
   section.galeria .thumb {
     width: 100%;
+  }
+  section.galeria div.left {
+    margin-top: 50px;
   }
 }
 
