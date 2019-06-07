@@ -27,7 +27,7 @@ body {
 
 body.uvod {
   background: url(../img/bg/3-v2.jpg) no-repeat fixed center;
-  background-position: top center;
+  background-position: center;
   background-color: black;
 }
 
@@ -35,6 +35,12 @@ body.uvod {
   body.uvod {
     background: url(../img/bg/3m-v2.jpg) no-repeat fixed center;
     background-color: black;
+  }
+}
+
+@media (max-height: 1000px) and (min-width: 900px) {
+  body.uvod {
+    background-size: 90%;
   }
 }
 
@@ -171,6 +177,12 @@ nav .dropdown > div {
 nav .dropdown > div a {
   padding: 8px 0;
   margin-left: 25px;
+}
+
+nav .dropdown.current > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 nav .dropdown:hover > div {
