@@ -15,11 +15,12 @@ body {
     background: url(../img/bg/2.jpg) no-repeat fixed center;
     background-color: black;
     &.uvod {
-        background: url(../img/bg/3-v2.jpg) no-repeat fixed center;
+        background: url(../img/bg/3-v3.jpg) no-repeat fixed center;
         background-position:  center;
         background-color: black;
         @media (max-width: 900px) {
-            background: url(../img/bg/3m-v2.jpg) no-repeat fixed center;
+            background: url(../img/bg/3-v3.jpg) no-repeat fixed center;
+            background-position: center 30%;
             background-color: black;
         }
         @media (max-height: 1000px) and (min-width:900px) {
