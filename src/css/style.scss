@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
     
     background: url(../img/bg/2.jpg) no-repeat fixed center;
     background-color: black;
@@ -99,6 +100,7 @@ nav {
     a.menu {display: none;}
     .logo {
         height: 100px;
+        width: 76px;
         @media (max-width: 900px) {
             height: 75px;
         }
@@ -215,9 +217,9 @@ section {
         align-items: center;
     }
     &.slideshow {
+        z-index: 50;
         position: absolute;
         bottom: 50px;
-        z-index: 50;
         @media (max-width: 900px) {
             position: relative;
             bottom: auto;
@@ -314,9 +316,11 @@ section {
     }
     .infobox {
         border: 1px solid $yellow;
-        padding: 3px 15px;
+        padding: 0px 15px;
         color: $yellow;
-        background: transparent;
+        margin: 15px 0;
+        display: inline-block;
+        background: black;
     }
     
     .form {
@@ -400,13 +404,13 @@ footer {
     
     &.fixed { position: fixed; }
     
-    &:before, &:after,
-    &.ref div:before, &.ref div:after {
-        content: "";
-        width: 50%;
-        height: 4px;
-        background: $yellow;
-    }
+//    &:before, &:after,
+//    &.ref div:before, &.ref div:after {
+//        content: "";
+//        width: 50%;
+//        height: 4px;
+//        background: $yellow;
+//    }
     
     &:before {margin: auto 3% auto auto;}
     &:after  {margin: auto auto auto 3%;}
@@ -504,5 +508,70 @@ footer {
 .hide-desktop {
     @media (min-width: 900px) {
         display: none;
+    }
+}
+
+.hilink {
+    position: relative;
+    @media (max-width: 1300px) {
+        width: 100%;
+    }
+    @media (max-width: 800px) {
+        background-image: none;
+    }
+    div {
+        height: 180px;
+        width: 1280px;
+        padding: 40px 60px 0 0;
+        @media (max-width: 1300px) {
+            width: 100%;
+        }
+        border: 1px solid rgba(255, 255, 0, 0.29);
+    }
+    @media (max-width: 500px) {
+        img {
+            height: 20px;
+        }
+        font-size: 13px;
+        div {
+            height: 140px;
+        }
+    }
+    box-sizing: border-box;
+    background-image: url(../img/galeria-hilink/zaznamy-bg.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    color: $yellow;
+    background-color: black;
+    border: 5px solid black;
+    &.yellow {
+        background-image: url(../img/galeria-hilink/kuzla-bg.jpg); 
+        background-size: auto 100%;
+        background-position: bottom right;
+        background-color: $yellow;
+        color: black;
+        border: 5px solid $yellow;
+        div {
+            border: 1px solid rgba(0, 0, 0, 0.23);
+            padding: 40px 0 0 60px;
+        }
+        @media (max-width: 800px) {
+            background-image: none;
+        }
+        @media (max-width: 500px) {
+            img {
+                height: 15px;
+            }
+        }
+    }
+    &.hright {
+        text-align: right;
+    }
+    p {
+        opacity: 0.5;
+        padding: 0;
+        margin: 0;
+        line-height: 1.4;
     }
 }

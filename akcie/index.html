@@ -28,14 +28,8 @@
     </head>
     <body onload="mobileNavToggle()">
         <nav id="nav">
-            <div class="dropdown" tabindex="0">
-                <a class="dropper" href="../">Úvod</a>
-                <div>
-                    <a class="current" href="../akcie">Druhy akcií</a>
-                    <a href="../triky">Druhy trikov</a>
-                </div>
-            </div>
             <a href="../omne">O mne</a>
+            <a href="../akcie" class="current">Akcie</a>
             <div class="logo-parent">
                 <a class="menu" href="javascript:void(0);" onclick="mobileNavToggle()">☰</a>
                 <img class="logo" src="../src/img/logo.svg">
@@ -44,16 +38,6 @@
             <a href="../kontakt">Kontakt</a>
         </nav>
         <section class="slideshow">
-            <!--<div class="right hide-desktop">
-                Javiskové<br>
-                Firemné<br>
-                Plesy<br>
-                Svadby<br>
-                Barové<br>
-                Súkromné<br>
-                Hotelové<br>
-                Nákupné strediská
-            </div>-->
             <div class="iframe jsHeight">
                 <iframe class="iosbugfix" style="position: relative; z-index: 999;" src="./slideshow" scrolling="no" frameborder="0"></iframe>
             </div>

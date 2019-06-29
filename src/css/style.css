@@ -17,6 +17,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow-x: hidden;
   background: url(../img/bg/2.jpg) no-repeat fixed center;
   background-color: black;
   font-family: "Segoe UI", sans-serif;
@@ -151,6 +152,7 @@ nav a.menu {
 
 nav .logo {
   height: 100px;
+  width: 76px;
 }
 
 @media (max-width: 900px) {
@@ -343,9 +345,9 @@ section.row {
 }
 
 section.slideshow {
+  z-index: 50;
   position: absolute;
   bottom: 50px;
-  z-index: 50;
 }
 
 @media (max-width: 900px) {
@@ -496,9 +498,11 @@ section .sns a {
 
 section .infobox {
   border: 1px solid #f1f148;
-  padding: 3px 15px;
+  padding: 0px 15px;
   color: #f1f148;
-  background: transparent;
+  margin: 15px 0;
+  display: inline-block;
+  background: black;
 }
 
 section .form {
@@ -607,14 +611,6 @@ footer {
 
 footer.fixed {
   position: fixed;
-}
-
-footer:before, footer:after,
-footer.ref div:before, footer.ref div:after {
-  content: "";
-  width: 50%;
-  height: 4px;
-  background: #f1f148;
 }
 
 footer:before {
@@ -769,4 +765,91 @@ footer.ref div {
   .hide-desktop {
     display: none;
   }
+}
+
+.hilink {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url(../img/galeria-hilink/zaznamy-bg.jpg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  color: #f1f148;
+  background-color: black;
+  border: 5px solid black;
+}
+
+@media (max-width: 1300px) {
+  .hilink {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hilink {
+    background-image: none;
+  }
+}
+
+.hilink div {
+  height: 180px;
+  width: 1280px;
+  padding: 40px 60px 0 0;
+  border: 1px solid rgba(255, 255, 0, 0.29);
+}
+
+@media (max-width: 1300px) {
+  .hilink div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hilink {
+    font-size: 13px;
+  }
+  .hilink img {
+    height: 20px;
+  }
+  .hilink div {
+    height: 140px;
+  }
+}
+
+.hilink.yellow {
+  background-image: url(../img/galeria-hilink/kuzla-bg.jpg);
+  background-size: auto 100%;
+  background-position: bottom right;
+  background-color: #f1f148;
+  color: black;
+  border: 5px solid #f1f148;
+}
+
+.hilink.yellow div {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 40px 0 0 60px;
+}
+
+@media (max-width: 800px) {
+  .hilink.yellow {
+    background-image: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .hilink.yellow img {
+    height: 15px;
+  }
+}
+
+.hilink.hright {
+  text-align: right;
+}
+
+.hilink p {
+  opacity: 0.5;
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
 }

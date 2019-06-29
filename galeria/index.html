@@ -14,6 +14,7 @@
         <!-- js -->
         <script src="../src/js/azuMobileNav.js"></script>
         <script src="../src/js/jquery.js"></script>
+        <script src="../src/js/azuJSHeight.js"></script>
         <script src="../src/js/lity.js"></script>
         <script src="../src/js/modernizr-custom.js"></script>
         
@@ -27,16 +28,10 @@
 		<meta name="msapplication-TileColor" content="#ffc40d">
 		<meta name="msapplication-config" content="./src/favicon/browserconfig.xml?v=bOLYEQNwbO">
     </head>
-    <body onload="mobileNavToggle()">
-        <nav id="nav">
-            <div class="dropdown" tabindex="0">
-               <a class="dropper" href="../">Úvod</a>
-                <div>
-                    <a href="../akcie">Druhy akcií</a>
-                    <a href="../triky">Druhy trikov</a>
-                </div>
-            </div>
+    <body onload="mobileNavToggle()" style="height: inherit; background-image: none;">
+        <nav id="nav" style="position: absolute;">
             <a href="../omne">O mne</a>
+            <a href="../akcie">Akcie</a>
             <div class="logo-parent">
                 <a class="menu" href="javascript:void(0);" onclick="mobileNavToggle()">☰</a>
                 <img class="logo" src="../src/img/logo.svg">
@@ -44,13 +39,21 @@
             <a href="../galeria" class="current">Galéria</a>
             <a href="../kontakt">Kontakt</a>
         </nav>
-        <section class="row galeria">
-            <div class="left">
-                <a href="./slideshow" data-lity><img class="thumb" src="../src/img/galeria-thumb/foto.jpg" width="500"></a>
-            </div>
-            <div class="right">
-                <a href="https://www.youtube.com/watch?v=r6BZ_YnrmwE" data-lity><img class="thumb" src="../src/img/galeria-thumb/video-maturita.jpg" width="400" style="margin-bottom: 10px;"></a>
-                <a href="https://www.youtube.com/watch?v=9TlKhlEwguU" data-lity><img class="thumb" src="../src/img/galeria-thumb/video.jpg" width="400"></a>
+        <section class="padding" style="margin-bottom: 25px;">
+            <a class="hilink yellow" href="https://www.youtube.com/watch?v=r6BZ_YnrmwE" data-lity>
+                <div>
+                    <img src="../src/img/galeria-hilink/kuzla.svg" height="30px" style="margin-bottom: 15px;">
+                    <p>Ukážky kúziel Braňa Kúzelníka<br>priamo na Vašej obrazovke.</p>
+                </div>
+            </a>
+            <a class="hilink hright" href="https://www.youtube.com/watch?v=9TlKhlEwguU" data-lity>
+                <div>
+                    <img src="../src/img/galeria-hilink/zaznamy.svg" height="40px" style="margin-bottom: 10px;">
+                    <p>Ako sa pri vystúpeniach<br>pobavilo publikum?</p>
+                </div>
+            </a>
+            <div class="iframe jsHeight">
+                <iframe class="iosbugfix" style="position: relative; z-index: 50;" src="./slideshow" scrolling="no" frameborder="0"></iframe>
             </div>
         </section>
     </body>
