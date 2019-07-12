@@ -13,6 +13,7 @@
         <!-- js -->
         <script src="../src/js/azuMobileNav.js"></script>
         <script src="../src/js/modernizr-custom.js"></script>
+        <script src="../src/js/jquery.js"></script>
         
         <!-- favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-touch-icon.png?v=bOLYEQNwbO">
@@ -25,6 +26,30 @@
 		<meta name="msapplication-config" content="../src/favicon/browserconfig.xml?v=bOLYEQNwbO">
 		<meta name="theme-color" content="#ffffff">
     </head>
+    <script>
+        $(document).ready(function(){
+                $("#tooltip.t1").hover(function(){
+                    $(".tooltip.t1").css("display", "block");
+                    }, function(){
+                    $(".tooltip.t1").css("display", "none");
+                });
+                $("#tooltip.t2").hover(function(){
+                    $(".tooltip.t2").css("display", "block");
+                    }, function(){
+                    $(".tooltip.t2").css("display", "none");
+                });
+                $("#tooltip.t3").hover(function(){
+                    $(".tooltip.t3").css("display", "block");
+                    }, function(){
+                    $(".tooltip.t3").css("display", "none");
+                });
+                $("#tooltip.t4").hover(function(){
+                    $(".tooltip.t4").css("display", "block");
+                    }, function(){
+                    $(".tooltip.t4").css("display", "none");
+                });
+            });
+    </script>
     <body onload="mobileNavToggle()">
         <nav id="nav">
             <a href="../omne" class="current">O mne</a>
@@ -42,16 +67,29 @@
             </div>
             <div class="right">
                 Som mladý chalan zo Západného Slovenska, ktorý sa aktívne venuje kúzelnickému umeniu.<br>
-                Na svojich kúzelnických vystúpeniach, ktoré sú určené pre dospelé aj detské publikum prezentujem: <br>
+                Na svojich kúzelnických vystúpeniach, ktoré sú určené pre <b>dospelé</b> aj <b>detské</b> publikum prezentujem: <br>
                 <br>
-                <img src="../src/img/icon/1.svg" width="20" style="margin-right: 10px;"> Moderná kúzelnícka SHOW<br>
-                <img src="../src/img/icon/2.svg" width="20" style="margin-right: 10px;"> Mikromágia - Tablehopping<br>
-                <img src="../src/img/icon/3.svg" width="20" style="margin-right: 10px;"> Javisková show<br>
-                <img src="../src/img/icon/4.svg" width="20" style="margin-right: 10px;"> Zábavná detská show<br>
-                <img src="../src/img/icon/4.svg" width="20" style="margin-right: 10px; opacity: 0;"> a rôzne triky, ktoré nielen zaujmú ale aj pobavia publikum.<br>
+                <img src="../src/img/icon/1.svg" width="20" style="margin: 0 15px 0 0;">
+                <a id="tooltip" class="t1">Moderná kúzelnícka show
+                    <span class="tooltip t1"> Jedinečná sólo <b>SHOW</b> modernej mágie so <b>ŠMRNCOM</b> pre Vaších hostí :&#41;<br>
+                <i>10-40 min</i></span>
+                </a><br>
+                <img src="../src/img/icon/2.svg" width="20" style="margin: 0 15px 0 0;">
+                <a id="tooltip" class="t2">Mikromágia - Tablehopping
+                    <span class="tooltip t2"><b>INDIVIDUÁLNA</b> interakcia s hosťami medzi stolmi. Neformálna forma pohybovania sa medzi skupinkami popri hlavnom programe.</span>
+                </a><br>
+                <img src="../src/img/icon/3.svg" width="20" style="margin: 0 15px 0 0;">
+                <a id="tooltip" class="t3">Javisková show 
+                    <span class="tooltip t3"><b>DYNAMICKÉ</b> predstavenie je prispôsobené väčšiemu publiku so zapájaním divákov do deja.</span>
+                </a><br>
+                <img src="../src/img/icon/4.svg" width="20" height="25" style="margin: 0 15px 0 0;">
+                <a id="tooltip" class="t4">Zábavná detská show 
+                    <span class="tooltip t4">Detská show plná <b>PESTRÝCH</b> kúziel a žonglovania. Deti majú priestor na predvedenie svojej šikovnosti a bystrosti :&#41;</span>
+                </a><br>
+                <img src="../src/img/icon/4.svg" width="25" height="25" style="margin: 0 15px 0 0; opacity: 0;">a rôzne triky, ktoré nielen zaujmú ale aj pobavia publikum.<br>
                 <br>
                 Pri svojich predstaveniach sa zameriavam na to aby diváci boli zapájaní do jednotlivých kúziel a tým vzájomne zdieľame príjemnú atmosféru.<br>
-                Teším sa na naše stretnutie a verím, že Vám vykúzlim nezabudnuteľný zážitok.
+                <span style="color: #f1f148;">Teším sa na naše stretnutie a verím, že Vám vykúzlim nezabudnuteľný zážitok :&#41;</span>
             </div>
         </section>
         <footer class="ref">

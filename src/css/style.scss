@@ -1,5 +1,9 @@
 $yellow: #f1f148;
 
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 html,body {
     margin: 0;
     padding: 0;
@@ -51,7 +55,7 @@ body {
     a.btn {
         text-decoration: none;
         border: 1px solid $yellow;
-        padding: 3px 15px;
+        padding: 0px 15px;
         color: black;
         background: $yellow;
     }
@@ -75,6 +79,8 @@ body {
 nav {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 99;
     
     display: flex;
@@ -142,7 +148,7 @@ nav {
         align-items: flex-start;
         overflow: hidden;
         height: 150px;
-        padding-top: 50px;
+        padding-top: 20px;
         
         .logo-parent {
             order: -1;
@@ -221,6 +227,8 @@ section {
         z-index: 50;
         position: absolute;
         bottom: 50px;
+        left: 0;
+        right: 0;
         @media (max-width: 900px) {
             position: relative;
             bottom: auto;
@@ -285,19 +293,27 @@ section {
         border-left: 4px solid $yellow;
         @media (max-width: 900px) {
             width: 100%;
+            padding-right: 15px;
+        }
+        @media (max-width: 500px) {
+            padding-left: 20px;
         }
     }
     .thumb {
         border: 1px solid $yellow;
     }
     .menovka {
-        width: 500px;
-        height: 53px;
-        background-image: url(../img/menovka.png);
+        min-height: 250px;
+        height: 250px;
+        pointer-events: none;
+        margin-top: -40px;
+        background-image: url(../img/podpis1.gif);
+        background-size: contain;
+        background-repeat: no-repeat;
         @media (max-width: 600px) {
             width: 235px;
             height: 95px;
-            background-image: url(../img/menovka2.png);
+//            background-image: url(../img/menovka2.png);
         }
     }
     .sns {
@@ -319,16 +335,19 @@ section {
         border: 1px solid $yellow;
         padding: 0px 15px;
         color: $yellow;
-        margin: 15px 0;
+        margin: 15px 0 0 0;
         display: inline-block;
         background: black;
+        a {
+            color: $yellow;
+            text-decoration: underline;
+        }
     }
     
     .form {
         max-width: 100%;
     }
 
-    
     @media (max-width: 1120px) {
         &.galeria .thumb {
             max-width: 400px;
@@ -388,6 +407,8 @@ section {
 footer {
     position: relative;
     bottom: 0;
+    left: 0;
+    right: 0;
     
     display: flex;
     flex-direction: row;
@@ -458,8 +479,11 @@ footer {
             justify-content: center;
             align-items: center;
         }
-        @media (max-width: 1100px) {
+        @media (max-width: 1300px) {
             img {width: 120px;}
+        }
+        @media (max-width: 970px) {
+            img {width: 100px;}
         }
         @media (max-width: 900px) {
             img {width: 120px;}
@@ -574,5 +598,111 @@ footer {
         padding: 0;
         margin: 0;
         line-height: 1.4;
+    }
+}
+
+#tooltip {
+    position: relative;
+    color: $yellow;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    .tooltip {
+        position: absolute;
+        display: none;
+        width: 500px;
+        top: 0px;
+        left: -620px;;
+        padding: 5 15px;
+        margin: 0;
+        color: black;
+        background: $yellow;
+        font-weight: normal;
+        z-index: 10;
+        i {
+            opacity: 0.5;
+        }
+        &:before {
+            position: absolute;
+            content: "";
+            left: 5px;
+            right: 5px;
+            top: 5px;
+            bottom: 5px;
+            border: 1px solid black;
+            opacity: 0.25;
+            z-index: 10;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0px;
+            right: -17px;
+            width: 18px;
+            height: 20px;
+            z-index: 9;
+            background: url(../img/arrow-right.svg);
+        }
+    }
+    @media (max-width: 1111px) {
+        .tooltip {
+            width: 350px;
+            left: -470px;
+        }
+    }
+    @media (max-width: 900px) {
+        .tooltip {
+            top: 15px;
+            position: relative;
+            left: 0;
+            max-width: 90%;
+            &:after {
+                width: 20px;
+                height: 18px;
+                left: 0;
+                top: -17px;
+                background: url(../img/arrow-top.svg);
+            }
+        }
+    }
+    @media (min-width: 900px) {
+        @media (max-height: 900px) {
+            .tooltip {
+                top: 15px;
+                position: relative;
+                left: 0;
+                max-width: 90%;
+                &:after {
+                    width: 20px;
+                    height: 18px;
+                    left: 0;
+                    top: -17px;
+                    background: url(../img/arrow-top.svg);
+                }
+            }
+        }
+    }
+    
+}
+
+.credit {
+    position: absolute;
+    bottom: 0px;
+    letter-spacing: normal;
+    font-size: 12px;
+    padding: 5px 0;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    border-top: 1px dotted rgba(255, 255, 0, 0.56);
+    margin: 0;
+    height: 50px;
+    color: rgba(255, 255, 0, 0.56);
+    background: rgba(0, 0, 0, 0.38);
+    a {color: rgba(255, 255, 0, 0.56);}
+    a:hover {color: rgba(255, 255, 0, 0.75);}
+    img{padding: 0 7px;}
+    @media (max-height: 750px) {
+        position: relative;
     }
 }

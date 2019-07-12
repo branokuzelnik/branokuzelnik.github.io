@@ -1,3 +1,7 @@
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -72,7 +76,7 @@ body a.link, body .infobox a {
 body a.btn {
   text-decoration: none;
   border: 1px solid #f1f148;
-  padding: 3px 15px;
+  padding: 0px 15px;
   color: black;
   background: #f1f148;
 }
@@ -112,6 +116,8 @@ body a.btn:hover {
 nav {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 99;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,7 +229,7 @@ nav .current.dropper:after {
     align-items: flex-start;
     overflow: hidden;
     height: 150px;
-    padding-top: 50px;
+    padding-top: 20px;
   }
   nav .logo-parent {
     -webkit-box-ordinal-group: 0;
@@ -349,6 +355,8 @@ section.slideshow {
   z-index: 50;
   position: absolute;
   bottom: 50px;
+  left: 0;
+  right: 0;
 }
 
 @media (max-width: 900px) {
@@ -452,6 +460,13 @@ section .right {
 @media (max-width: 900px) {
   section .right {
     width: 100%;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  section .right {
+    padding-left: 20px;
   }
 }
 
@@ -460,16 +475,19 @@ section .thumb {
 }
 
 section .menovka {
-  width: 500px;
-  height: 53px;
-  background-image: url(../img/menovka.png);
+  min-height: 250px;
+  height: 250px;
+  pointer-events: none;
+  margin-top: -40px;
+  background-image: url(../img/podpis1.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 600px) {
   section .menovka {
     width: 235px;
     height: 95px;
-    background-image: url(../img/menovka2.png);
   }
 }
 
@@ -501,9 +519,14 @@ section .infobox {
   border: 1px solid #f1f148;
   padding: 0px 15px;
   color: #f1f148;
-  margin: 15px 0;
+  margin: 15px 0 0 0;
   display: inline-block;
   background: black;
+}
+
+section .infobox a {
+  color: #f1f148;
+  text-decoration: underline;
 }
 
 section .form {
@@ -588,6 +611,8 @@ section .form {
 footer {
   position: relative;
   bottom: 0;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -696,9 +721,15 @@ footer.ref div {
   align-items: center;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   footer.ref img {
     width: 120px;
+  }
+}
+
+@media (max-width: 970px) {
+  footer.ref img {
+    width: 100px;
   }
 }
 
@@ -853,4 +884,130 @@ footer.ref div {
   padding: 0;
   margin: 0;
   line-height: 1.4;
+}
+
+#tooltip {
+  position: relative;
+  color: #f1f148;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#tooltip .tooltip {
+  position: absolute;
+  display: none;
+  width: 500px;
+  top: 0px;
+  left: -620px;
+  padding: 5 15px;
+  margin: 0;
+  color: black;
+  background: #f1f148;
+  font-weight: normal;
+  z-index: 10;
+}
+
+#tooltip .tooltip i {
+  opacity: 0.5;
+}
+
+#tooltip .tooltip:before {
+  position: absolute;
+  content: "";
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  border: 1px solid black;
+  opacity: 0.25;
+  z-index: 10;
+}
+
+#tooltip .tooltip:after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: -17px;
+  width: 18px;
+  height: 20px;
+  z-index: 9;
+  background: url(../img/arrow-right.svg);
+}
+
+@media (max-width: 1111px) {
+  #tooltip .tooltip {
+    width: 350px;
+    left: -470px;
+  }
+}
+
+@media (max-width: 900px) {
+  #tooltip .tooltip {
+    top: 15px;
+    position: relative;
+    left: 0;
+    max-width: 90%;
+  }
+  #tooltip .tooltip:after {
+    width: 20px;
+    height: 18px;
+    left: 0;
+    top: -17px;
+    background: url(../img/arrow-top.svg);
+  }
+}
+
+@media (min-width: 900px) and (max-height: 900px) {
+  #tooltip .tooltip {
+    top: 15px;
+    position: relative;
+    left: 0;
+    max-width: 90%;
+  }
+  #tooltip .tooltip:after {
+    width: 20px;
+    height: 18px;
+    left: 0;
+    top: -17px;
+    background: url(../img/arrow-top.svg);
+  }
+}
+
+.credit {
+  position: absolute;
+  bottom: 0px;
+  letter-spacing: normal;
+  font-size: 12px;
+  padding: 5px 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-top: 1px dotted rgba(255, 255, 0, 0.56);
+  margin: 0;
+  height: 50px;
+  color: rgba(255, 255, 0, 0.56);
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.credit a {
+  color: rgba(255, 255, 0, 0.56);
+}
+
+.credit a:hover {
+  color: rgba(255, 255, 0, 0.75);
+}
+
+.credit img {
+  padding: 0 7px;
+}
+
+@media (max-height: 750px) {
+  .credit {
+    position: relative;
+  }
 }
