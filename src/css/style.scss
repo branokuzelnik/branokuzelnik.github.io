@@ -1,5 +1,9 @@
 $yellow: #f1f148;
 
+* {
+    outline: none;
+}
+
 html {
     -webkit-text-size-adjust: 100%;
 }
@@ -479,14 +483,18 @@ footer {
             justify-content: center;
             align-items: center;
         }
+        @media (min-width: 1650px) {
+            img {width: 160px;}
+        }
         @media (max-width: 1300px) {
             img {width: 120px;}
         }
-        @media (max-width: 970px) {
-            img {width: 100px;}
+        @media (max-width: 1160px) {
+            img {width: 110px;}
+            a {margin: 0 10px;}
         }
         @media (max-width: 900px) {
-            img {width: 120px;}
+            img {width: 100px;}
             &:before, &:after {
                 display: none;
             }

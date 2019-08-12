@@ -1,3 +1,7 @@
+* {
+  outline: none;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -721,15 +725,24 @@ footer.ref div {
   align-items: center;
 }
 
+@media (min-width: 1650px) {
+  footer.ref img {
+    width: 160px;
+  }
+}
+
 @media (max-width: 1300px) {
   footer.ref img {
     width: 120px;
   }
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1160px) {
   footer.ref img {
-    width: 100px;
+    width: 110px;
+  }
+  footer.ref a {
+    margin: 0 10px;
   }
 }
 
@@ -746,7 +759,7 @@ footer.ref div {
     margin-top: 20px;
   }
   footer.ref img {
-    width: 120px;
+    width: 100px;
   }
   footer.ref:before, footer.ref:after {
     display: none;
